@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <b>Browse, search, and download Steam Workshop wallpapers directly into Wallpaper Engine — no Steam subscription required!</b>
+  <b>Browse, search, and download Steam Workshop wallpapers directly into Wallpaper Engine — no official Steam copy required!</b>
 </p>
 
 <p align="center">

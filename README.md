@@ -51,6 +51,7 @@
 
 <h2 align="center">📋 Requirements</h2>
 
+- [**Microsoft .Net 9.0**](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-9.0.308-windows-x64-installer)
 - **Windows OS** (uses Windows Registry for path detection)
 - **Wallpaper Engine**
 - **Python 3.8+** (for running from source)

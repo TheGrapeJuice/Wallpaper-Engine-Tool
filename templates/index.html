@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallpaper Engine Browser</title>
+  <link rel="icon" href="../resources/icon.ico" />
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">Wallpaper Engine downloader</div>
+      <h1>Top Workshop Wallpapers</h1>
+      <p class="subhead">Auto-detect your install, browse the best picks, and pull them straight into Wallpaper Engine.</p>
+    </div>
+    <div id="install-info" class="pill muted">Detecting install...</div>
+  </header>
+
+  <main>
+    <div class="tabs">
+      <button class="tab active" data-tab="top">Top</button>
+      <button class="tab" data-tab="downloads">Downloaded</button>
+    </div>
+
+    <section id="top" class="panel active">
+      <div class="controls stack-on-mobile">
+        <select id="sort-method" class="select">
+          <option value="trend">Most Popular</option>
+          <option value="mostrecent">Most Recent</option>
+          <option value="lastupdated">Last Updated</option>
+          <option value="mostsubscribed">Most Subscribed</option>
+        </select>
+        <select id="time-period" class="select">
+          <option value="-1">All Time</option>
+          <option value="1">Today</option>
+          <option value="7">One Week</option>
+          <option value="30">One Month</option>
+          <option value="90">Three Months</option>
+          <option value="180">Six Months</option>
+          <option value="365">One Year</option>
+        </select>
+        <input id="search" type="text" placeholder="Search or paste workshop ID (e.g. 3309647577)" />
+        <button id="refresh-btn">Search</button>
+        <button id="prev-page">&laquo; Prev</button>
+        <span id="page-info" class="pill muted">Page 1</span>
+        <button id="next-page">Next &raquo;</button>
+        <span id="status" class="pill muted">Ready</span>
+      </div>
+      <div id="grid" class="grid"></div>
+    </section>
+
+    <section id="downloads" class="panel">
+      <div class="controls">
+        <button id="refresh-downloads">Reload</button>
+        <span id="download-status" class="pill muted">No downloads yet</span>
+      </div>
+      <div id="download-grid" class="grid"></div>
+    </section>
+  </main>
+
+  <template id="card-template">
+    <article class="card">
+      <img class="thumb" src="" alt="">
+      <div class="card-body">
+        <div class="title-row">
+          <h3 class="title"></h3>
+          <span class="rating"></span>
+        </div>
+        <p class="author"></p>
+        <div class="actions">
+          <button class="download-btn">Download</button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="../static/app.js"></script>
+</body>
+</html>
